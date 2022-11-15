@@ -1,17 +1,18 @@
+
 * {
     box-sizing: border-box;
+    font-family: "Lato", sans-serif;
 }
 .grid-container {
     width: 100%;
     height: 100%;
     display: grid;
     justify-content: center;
-    grid-template-columns: 20% 30%;
+    grid-template-columns: 20% 35%;
     grid-template-rows: 50vw;
-    background-color: grey;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2042508-jpeg.jpg")
 }
 .left {
-
     background-color: #c4e0ed;
 }
 .right {
@@ -19,7 +20,6 @@
 }
 h1, h2 {
     text-align: center;
-    font-family: "Lato", sans-serif;
     font-weight: normal;
 }
 h2 {
@@ -30,11 +30,37 @@ li {
 }
 form {
     background-color: white;
-    margin: 20px;
+    margin: 50px;
+    box-shadow: 0 0 5px #e9e8e8;
 }
 input {
     width: 90%;
     padding: 10px;
     margin: 15px;
-    border:
+    border: none;
+    border-bottom: 1px solid #c7c7c7;
+}
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 0 15px 15px 15px;
+    border: none;
+    border-bottom: 1px solid #c7c7c7;
+}
+::placeholder {
+    color: #757575;
+    font-size: 15px;
+}
+button {
+    background-color: #9ed8eb;
+    color: white;
+    font-size: 18px;
+    border: none;
+    width: 20%;
+    padding: 8px;
+    border-radius: 40px;
+    position: absolute;
+    display: block;
+    right: 430px;
+    top: 430px;
 }
