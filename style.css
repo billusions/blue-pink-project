@@ -2,18 +2,31 @@
 * {
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
 }
-.grid-container {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 20% 35%;
-    grid-template-rows: 50vw;
+body {
+    height: 100vh;
+    width: 100vw;
     background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2042508-jpeg.jpg")
 }
+.grid-container {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+
+}
 .left {
+    grid-column: 2/3;
     background-color: #c4e0ed;
+}
+.row1 {
+    grid-row: 1/2;
+}
+.row2 {
+    grid-row: 2/3;
 }
 .fab {
     font-size: 20px;
@@ -22,8 +35,6 @@
 .social-media-bar {
     display: flex;
     justify-content: center;
-    position: fixed;
-    bottom: 0;
 }
 .right {
     background-color: #f4f3f3;
@@ -61,6 +72,9 @@ li {
 .address, .phone, .email {
     text-align: center;
     margin: 0 20px;
+}
+.white {
+    grid-row: 3/4;
 }
 form {
     background-color: white;
