@@ -8,7 +8,7 @@
 body {
     height: 100vh;
     width: 100vw;
-    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2042508-jpeg.jpg")
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2042508-jpeg.jpg");
 }
 .grid-container {
     display: grid;
@@ -76,6 +76,7 @@ li {
     margin-top: 20px;
 }
 form {
+    position: relative;
     background-color: white;
     margin: 0 50px;
     box-shadow: 0 0 5px #e9e8e8;
@@ -102,15 +103,13 @@ textarea {
     text-align: center;
     position: absolute;
     display: block;
-    right: 35%;
-    bottom: 8%;
-}
-button {
+    right: 25%;
+    bottom: -8%;
     background-color: #9ed8eb;
     color: white;
     font-size: 18px;
     border: none;
-    width: 150px;
-    padding: 8px;
+    width: 250px;
+    padding: 10px;
     border-radius: 40px;
 }
