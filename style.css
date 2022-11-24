@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
 * {
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
@@ -8,20 +8,21 @@
 body {
     height: 100vh;
     width: 100vw;
-    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2042508-jpeg.jpg");
-    overflow-y: hidden;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2042508-jpeg.jpg");;
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
 .grid-container {
     display: grid;
-    width: 100vw;
-    height: 78%;
-    justify-content: center;
-    margin-top: 6%;
-    margin-bottom: 10%;
-    grid-template-columns: 1fr 270px 560px 1fr;
+    width: 800px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 2fr;
+    grid-template-areas: "left header header header" "left address phone email" "left white white white";
 }
 .left {
-    grid-column: 2/3;
+    grid-area: left;
+    width: 250px;
     background-color: #c4e0ed;
     position: relative;
     overflow: hidden;
@@ -79,7 +80,8 @@ body {
     left: 70px;
     z-index: 1;
 }
-.right {
+.header {
+    grid-area: header;
     background-color: #f4f3f3;
 }
 h1, h2 {
@@ -94,6 +96,21 @@ h2 {
     margin-bottom: 50px;
     font-weight: 100;
 }
+.address {
+    grid-area: address;
+    background-color: #f4f3f3;
+    text-align: center;
+}
+.phone {
+    grid-area: phone;
+    background-color: #f4f3f3;
+    text-align: center;
+}
+.email {
+    grid-area: email;
+    background-color: #f4f3f3;
+    text-align: center;
+}
 h4 {
     font-weight: normal;
     margin: 0;
@@ -104,30 +121,18 @@ h4 {
 #distance {
     padding-top: 0;
 }
-ul {
-    list-style: none;
-    display: inline-flex;
-    margin: 0 20px;
-    padding: 0;
-}
-li {
-    display: inline;
-}
 .fa-envelope, .fa-phone-alt, .fa-map-marker-alt {
     color: #f8b7d8;
     font-size: 28px;
 }
-.address, .phone, .email {
-    text-align: center;
-    margin: 0 35px;
-}
 .white {
-    margin-top: 20px;
+    grid-area: white;
+    background-color: #f4f3f3;
 }
 form {
     position: relative;
     background-color: white;
-    margin: 0 50px;
+    margin: 0 50px 40px 50px;
     box-shadow: 0 0 5px #e9e8e8;
 }
 input {
@@ -136,6 +141,9 @@ input {
     margin: 15px;
     border: none;
     border-bottom: 1px solid #c7c7c7;
+}
+#margin-for-first-input {
+    margin-top: 40px;
 }
 textarea {
     width: 90%;
@@ -150,7 +158,7 @@ input:focus, textarea:focus {
 }
 ::placeholder {
     color: #757575;
-    font-size: 15px;
+    font-size: 17px;
 }
 .button {
     text-align: center;
