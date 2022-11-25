@@ -141,6 +141,8 @@ input {
     margin: 15px;
     border: none;
     border-bottom: 1px solid #c7c7c7;
+    font-size: 16px;
+    color: #686969;
 }
 #margin-for-first-input {
     margin-top: 40px;
@@ -152,9 +154,13 @@ textarea {
     border: none;
     border-bottom: 1px solid #c7c7c7;
     resize: none;
+    font-size: 16px;
+    color: #686969;
 }
 input:focus, textarea:focus {
     outline: none;
+    font-size: 16px;
+    color: #686969;
 }
 ::placeholder {
     color: #757575;
